@@ -1,0 +1,2156 @@
+[2024-03-03 19:21:37,015][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 19:21:37,015][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 19:21:37,023][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 19:21:37,079][__main__][INFO] - Instantiating datamodule <src_Xray.data.Xray_datamodule.XrayDataModule>
+[2024-03-03 19:21:37,081][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 635, in _locate
+    obj = import_module(part0)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src_Xray'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 637, in _locate
+    raise ImportError(
+ImportError: Error loading 'src_Xray.data.Xray_datamodule.XrayDataModule':
+ModuleNotFoundError("No module named 'src_Xray'")
+Are you sure that module 'src_Xray' is installed?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 53, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'src_Xray.data.Xray_datamodule.XrayDataModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: data
+[2024-03-03 19:21:37,086][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-21-36
+[2024-03-03 19:24:02,868][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 19:24:02,869][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 19:24:02,874][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 19:24:02,919][__main__][INFO] - Instantiating datamodule <src_pokeman.data.Xray_datamodule.XrayDataModule>
+[2024-03-03 19:24:02,921][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'src_pokeman.data' has no attribute 'Xray_datamodule'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src_pokeman.data.Xray_datamodule'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'src_pokeman.data.Xray_datamodule.XrayDataModule':
+ModuleNotFoundError("No module named 'src_pokeman.data.Xray_datamodule'")
+Are you sure that 'Xray_datamodule' is importable from module 'src_pokeman.data'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 53, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'src_pokeman.data.Xray_datamodule.XrayDataModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: data
+[2024-03-03 19:24:02,923][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-24-02
+[2024-03-03 19:24:41,110][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 19:24:41,111][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 19:24:41,116][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 19:24:41,162][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray_datamodule.XrayDataModule>
+[2024-03-03 19:24:41,165][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'src_pokeman.data' has no attribute 'X-ray_datamodule'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src_pokeman.data.X-ray_datamodule'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'src_pokeman.data.X-ray_datamodule.XrayDataModule':
+ModuleNotFoundError("No module named 'src_pokeman.data.X-ray_datamodule'")
+Are you sure that 'X-ray_datamodule' is importable from module 'src_pokeman.data'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 53, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'src_pokeman.data.X-ray_datamodule.XrayDataModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: data
+[2024-03-03 19:24:41,166][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-24-41
+[2024-03-03 19:25:14,886][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 19:25:14,886][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 19:25:14,892][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 19:25:14,936][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray_datamodule.XrayDataModule>
+[2024-03-03 19:25:14,938][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'src_pokeman.data' has no attribute 'X-ray_datamodule'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src_pokeman.data.X-ray_datamodule'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'src_pokeman.data.X-ray_datamodule.XrayDataModule':
+ModuleNotFoundError("No module named 'src_pokeman.data.X-ray_datamodule'")
+Are you sure that 'X-ray_datamodule' is importable from module 'src_pokeman.data'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 53, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'src_pokeman.data.X-ray_datamodule.XrayDataModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: data
+[2024-03-03 19:25:14,939][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-25-14
+[2024-03-03 19:30:12,114][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 19:30:12,114][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 19:30:12,120][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 19:30:12,164][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 19:30:12,170][__main__][INFO] - Instantiating model <src.models.Xray_module.XrayLitModule>
+[2024-03-03 19:30:12,171][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'src.models' has no attribute 'Xray_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.models.Xray_module'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'src.models.Xray_module.XrayLitModule':
+ModuleNotFoundError("No module named 'src.models.Xray_module'")
+Are you sure that 'Xray_module' is importable from module 'src.models'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'src.models.Xray_module.XrayLitModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model
+[2024-03-03 19:30:12,173][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-30-12
+[2024-03-03 19:30:56,491][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 19:30:56,492][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 19:30:56,498][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 19:30:56,542][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 19:30:56,546][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 19:30:56,608][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 19:30:56,608][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 19:30:56,610][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 19:30:56,611][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 19:30:56,612][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 19:30:56,612][__main__][INFO] - Instantiating loggers...
+[2024-03-03 19:30:56,612][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 19:30:56,655][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 19:30:56,772][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 19:31:10,985][__main__][INFO] - Starting training!
+[2024-03-03 20:09:17,787][__main__][INFO] - Starting testing!
+[2024-03-03 20:09:23,095][__main__][INFO] - Best ckpt path: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-30-56/checkpoints\epoch_020.ckpt
+[2024-03-03 20:09:23,096][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_19-30-56
+[2024-03-03 20:09:23,096][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 20:09:38,503][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 20:09:38,503][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 20:09:38,509][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 20:09:38,557][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 20:09:38,561][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 20:09:38,627][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 20:09:38,627][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 20:09:38,629][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 20:09:38,630][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 20:09:38,631][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 20:09:38,631][__main__][INFO] - Instantiating loggers...
+[2024-03-03 20:09:38,632][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 20:09:38,674][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 20:09:38,796][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 20:09:50,172][__main__][INFO] - Starting training!
+[2024-03-03 20:09:55,064][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1035, in _run_stage
+    self.fit_loop.run()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 202, in run
+    self.advance()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 359, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 136, in run
+    self.advance(data_fetcher)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 240, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 187, in run
+    self._optimizer_step(batch_idx, closure)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 265, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 157, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\module.py", line 1282, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\optimizer.py", line 151, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 230, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\plugins\precision\precision.py", line 117, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src\optim\Optimizer.py", line 12, in step
+    loss = closure()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\plugins\precision\precision.py", line 104, in _wrap_closure
+    closure_result = closure()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 140, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 126, in closure
+    step_output = self._step_fn()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 309, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 382, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\models\Xray_module.py", line 78, in training_step
+    self.train_acc(preds, targets)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 470, in wrapped_func
+    raise err
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 460, in wrapped_func
+    update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\classification\stat_scores.py", line 331, in update
+    _multiclass_stat_scores_tensor_validation(
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\functional\classification\stat_scores.py", line 319, in _multiclass_stat_scores_tensor_validation
+    raise RuntimeError(
+RuntimeError: Detected more unique values in `preds` than `num_classes`. Expected only 5 but found 7 in `preds`.
+[2024-03-03 20:09:55,080][src.utils.utils][INFO] - Output dir: D:\PCproject\data\X-ray_logs\logs\train\runs\2024-03-03_20-09-38
+[2024-03-03 20:09:55,080][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 20:11:18,986][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 20:11:18,986][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 20:11:18,993][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 20:11:19,037][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 20:11:19,041][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 20:11:19,104][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 20:11:19,105][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 20:11:19,107][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 20:11:19,108][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 20:11:19,108][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 20:11:19,109][__main__][INFO] - Instantiating loggers...
+[2024-03-03 20:11:19,109][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 20:11:19,152][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 20:11:19,272][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 20:11:42,797][__main__][INFO] - Starting training!
+[2024-03-03 20:24:17,563][__main__][INFO] - Starting testing!
+[2024-03-03 20:38:34,668][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 20:38:34,668][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 20:38:34,675][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 20:38:34,720][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 20:38:34,725][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 20:38:34,787][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 20:38:34,787][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 20:38:34,790][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 20:38:34,791][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 20:38:34,791][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 20:38:34,792][__main__][INFO] - Instantiating loggers...
+[2024-03-03 20:38:34,792][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 20:38:34,833][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 20:38:34,949][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 20:38:42,113][__main__][INFO] - Starting training!
+[2024-03-03 20:38:44,948][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1033, in _run_stage
+    self._run_sanity_check()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1062, in _run_sanity_check
+    val_loop.run()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\utilities.py", line 182, in _decorator
+    return loop_run(self, *args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\evaluation_loop.py", line 134, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\evaluation_loop.py", line 391, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 309, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 403, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\models\Xray_module.py", line 93, in validation_step
+    self.val_acc(preds, targets)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 470, in wrapped_func
+    raise err
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 460, in wrapped_func
+    update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\classification\stat_scores.py", line 331, in update
+    _multiclass_stat_scores_tensor_validation(
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\functional\classification\stat_scores.py", line 310, in _multiclass_stat_scores_tensor_validation
+    raise RuntimeError(
+RuntimeError: Detected more unique values in `target` than `num_classes`. Expected only 5 but found 8 in `target`.
+[2024-03-03 20:38:44,955][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_20-38-34
+[2024-03-03 20:38:44,956][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 20:39:23,216][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 20:39:23,216][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 20:39:23,222][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 20:39:23,269][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 20:39:23,274][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 20:39:23,336][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 20:39:23,337][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 20:39:23,339][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 20:39:23,340][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 20:39:23,340][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 20:39:23,341][__main__][INFO] - Instantiating loggers...
+[2024-03-03 20:39:23,341][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 20:39:23,385][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 20:39:23,503][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 20:39:30,412][__main__][INFO] - Starting training!
+[2024-03-03 20:39:33,312][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1033, in _run_stage
+    self._run_sanity_check()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1062, in _run_sanity_check
+    val_loop.run()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\utilities.py", line 182, in _decorator
+    return loop_run(self, *args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\evaluation_loop.py", line 134, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\evaluation_loop.py", line 391, in _evaluation_step
+    output = call._call_strategy_hook(trainer, hook_name, *step_args)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 309, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 403, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\models\Xray_module.py", line 93, in validation_step
+    self.val_acc(preds, targets)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 470, in wrapped_func
+    raise err
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 460, in wrapped_func
+    update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\classification\stat_scores.py", line 331, in update
+    _multiclass_stat_scores_tensor_validation(
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\functional\classification\stat_scores.py", line 310, in _multiclass_stat_scores_tensor_validation
+    raise RuntimeError(
+RuntimeError: Detected more unique values in `target` than `num_classes`. Expected only 5 but found 8 in `target`.
+[2024-03-03 20:39:33,316][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_20-39-23
+[2024-03-03 20:39:33,316][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 20:41:23,395][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 20:41:23,396][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 20:41:23,402][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 20:41:23,452][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 20:41:23,456][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 20:41:23,527][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 20:41:23,527][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 20:41:23,530][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 20:41:23,531][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 20:41:23,531][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 20:41:23,532][__main__][INFO] - Instantiating loggers...
+[2024-03-03 20:41:23,532][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 20:41:23,577][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 20:41:23,695][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 20:41:27,694][__main__][INFO] - Starting training!
+[2024-03-03 20:55:01,711][__main__][INFO] - Starting testing!
+[2024-03-03 20:55:02,792][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_20-41-23/checkpoints\epoch_084.ckpt
+[2024-03-03 20:55:02,793][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_20-41-23
+[2024-03-03 20:55:02,794][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 20:55:53,318][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 20:55:53,318][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 20:55:53,324][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 20:55:53,368][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 20:55:53,372][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 20:55:53,440][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 20:55:53,441][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 20:55:53,443][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 20:55:53,444][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 20:55:53,445][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 20:55:53,446][__main__][INFO] - Instantiating loggers...
+[2024-03-03 20:55:53,446][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 20:55:53,492][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 20:55:53,609][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 20:56:08,959][__main__][INFO] - Starting training!
+[2024-03-03 21:08:00,076][__main__][INFO] - Starting testing!
+[2024-03-03 21:08:01,060][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_20-55-53/checkpoints\epoch_050.ckpt
+[2024-03-03 21:08:01,062][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_20-55-53
+[2024-03-03 21:08:01,062][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 21:08:42,346][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 21:08:42,346][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 21:08:42,352][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 21:08:42,397][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 21:08:42,401][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 21:08:42,466][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 21:08:42,466][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 21:08:42,469][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 21:08:42,469][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 21:08:42,470][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 21:08:42,471][__main__][INFO] - Instantiating loggers...
+[2024-03-03 21:08:42,471][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 21:08:42,515][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 21:08:42,634][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 21:08:46,639][__main__][INFO] - Starting training!
+[2024-03-03 21:09:19,839][__main__][INFO] - Starting testing!
+[2024-03-03 21:09:21,005][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-08-42/checkpoints\epoch_000.ckpt
+[2024-03-03 21:09:21,006][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-08-42
+[2024-03-03 21:09:21,007][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 21:09:35,833][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 21:09:35,833][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 21:09:35,839][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 21:09:35,888][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 21:09:35,892][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 21:09:35,959][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 21:09:35,959][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 21:09:35,962][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 21:09:35,963][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 21:09:35,963][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 21:09:35,964][__main__][INFO] - Instantiating loggers...
+[2024-03-03 21:09:35,965][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 21:09:36,010][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 21:09:36,134][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 21:09:41,106][__main__][INFO] - Starting training!
+[2024-03-03 21:11:32,216][__main__][INFO] - Starting testing!
+[2024-03-03 21:11:33,351][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-09-35/checkpoints\epoch_010.ckpt
+[2024-03-03 21:11:33,352][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-09-35
+[2024-03-03 21:11:33,352][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 21:11:39,505][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 21:11:39,505][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 21:11:39,511][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 21:11:39,560][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 21:11:39,565][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 21:11:39,631][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 21:11:39,632][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 21:11:39,634][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 21:11:39,635][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 21:11:39,636][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 21:11:39,636][__main__][INFO] - Instantiating loggers...
+[2024-03-03 21:11:39,636][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 21:11:39,681][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 21:11:39,803][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 21:11:45,047][__main__][INFO] - Starting training!
+[2024-03-03 21:23:27,153][__main__][INFO] - Starting testing!
+[2024-03-03 21:23:28,424][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-11-39/checkpoints\epoch_041.ckpt
+[2024-03-03 21:23:28,425][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-11-39
+[2024-03-03 21:23:28,425][src.utils.utils][INFO] - Closing wandb!
+[2024-03-03 21:26:05,923][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-03 21:26:05,923][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-03 21:26:05,929][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-03 21:26:05,973][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-03 21:26:05,976][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-03 21:26:06,039][__main__][INFO] - Instantiating callbacks...
+[2024-03-03 21:26:06,040][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-03 21:26:06,042][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-03 21:26:06,043][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-03 21:26:06,043][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-03 21:26:06,044][__main__][INFO] - Instantiating loggers...
+[2024-03-03 21:26:06,044][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-03 21:26:06,087][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-03 21:26:06,214][__main__][INFO] - Logging hyperparameters!
+[2024-03-03 21:26:14,773][__main__][INFO] - Starting training!
+[2024-03-03 21:43:31,972][__main__][INFO] - Starting testing!
+[2024-03-03 21:43:32,951][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-26-05/checkpoints\epoch_046.ckpt
+[2024-03-03 21:43:32,952][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-03_21-26-05
+[2024-03-03 21:43:32,952][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 10:50:28,223][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 10:50:28,223][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 10:50:28,230][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 10:50:28,278][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 10:50:28,282][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 10:50:28,355][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 10:50:28,355][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 10:50:28,358][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 10:50:28,359][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 10:50:28,359][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 10:50:28,360][__main__][INFO] - Instantiating loggers...
+[2024-03-04 10:50:28,360][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 10:50:28,404][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 10:50:28,606][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 10:50:35,979][__main__][INFO] - Starting training!
+[2024-03-04 11:10:18,209][__main__][INFO] - Starting testing!
+[2024-03-04 11:10:19,391][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_10-50-28/checkpoints\epoch_080.ckpt
+[2024-03-04 11:10:19,392][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_10-50-28
+[2024-03-04 11:10:19,392][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 11:21:13,784][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 11:21:13,784][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 11:21:13,790][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 11:21:13,836][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 11:21:13,840][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 11:21:13,904][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 11:21:13,905][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 11:21:13,907][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 11:21:13,908][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 11:21:13,909][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 11:21:13,909][__main__][INFO] - Instantiating loggers...
+[2024-03-04 11:21:13,909][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 11:21:13,953][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 11:21:14,075][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 11:21:24,764][__main__][INFO] - Starting training!
+[2024-03-04 11:35:13,621][__main__][INFO] - Starting testing!
+[2024-03-04 11:35:14,646][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-21-13/checkpoints\epoch_060.ckpt
+[2024-03-04 11:35:14,647][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-21-13
+[2024-03-04 11:35:14,648][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 11:36:32,319][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 11:36:32,319][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 11:36:32,326][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 11:36:32,375][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 11:36:32,379][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 11:36:32,440][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 11:36:32,441][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 11:36:32,443][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 11:36:32,444][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 11:36:32,445][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 11:36:32,445][__main__][INFO] - Instantiating loggers...
+[2024-03-04 11:36:32,445][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 11:36:32,490][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 11:36:32,612][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 11:36:40,238][__main__][INFO] - Starting training!
+[2024-03-04 11:46:50,911][__main__][INFO] - Starting testing!
+[2024-03-04 11:46:52,080][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-36-32/checkpoints\epoch_042.ckpt
+[2024-03-04 11:46:52,082][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-36-32
+[2024-03-04 11:46:52,082][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 11:47:19,771][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 11:47:19,771][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 11:47:19,777][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 11:47:19,829][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 11:47:19,833][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 11:47:19,896][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 11:47:19,896][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 11:47:19,899][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 11:47:19,900][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 11:47:19,901][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 11:47:19,902][__main__][INFO] - Instantiating loggers...
+[2024-03-04 11:47:19,902][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 11:47:20,021][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 11:47:20,174][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 11:47:25,499][__main__][INFO] - Starting training!
+[2024-03-04 11:53:57,168][__main__][INFO] - Starting testing!
+[2024-03-04 11:53:58,506][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-47-19/checkpoints\epoch_011.ckpt
+[2024-03-04 11:53:58,508][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-47-19
+[2024-03-04 11:53:58,511][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 11:56:19,900][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 11:56:19,900][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 11:56:19,908][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 11:56:19,958][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 11:56:19,962][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 11:56:20,025][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 11:56:20,025][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 11:56:20,028][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 11:56:20,028][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 11:56:20,029][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 11:56:20,030][__main__][INFO] - Instantiating loggers...
+[2024-03-04 11:56:20,030][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 11:56:20,075][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 11:56:20,203][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 11:56:28,356][__main__][INFO] - Starting training!
+[2024-03-04 12:02:21,800][__main__][INFO] - Starting testing!
+[2024-03-04 12:02:22,829][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-56-19/checkpoints\epoch_018.ckpt
+[2024-03-04 12:02:22,830][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_11-56-19
+[2024-03-04 12:02:22,831][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 12:02:36,824][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 12:02:36,824][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 12:02:36,831][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 12:02:36,881][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 12:02:36,885][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 12:02:36,950][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 12:02:36,950][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 12:02:36,952][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 12:02:36,953][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 12:02:36,954][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 12:02:36,954][__main__][INFO] - Instantiating loggers...
+[2024-03-04 12:02:36,955][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 12:02:37,000][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 12:02:37,201][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 12:02:43,461][__main__][INFO] - Starting training!
+[2024-03-04 12:09:49,530][__main__][INFO] - Starting testing!
+[2024-03-04 12:09:50,567][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-02-36/checkpoints\epoch_029.ckpt
+[2024-03-04 12:09:50,568][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-02-36
+[2024-03-04 12:09:50,568][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 12:11:42,115][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 12:11:42,115][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 12:11:42,121][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 12:11:42,170][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 12:11:42,174][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 12:11:42,239][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 12:11:42,240][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 12:11:42,242][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 12:11:42,243][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 12:11:42,243][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 12:11:42,244][__main__][INFO] - Instantiating loggers...
+[2024-03-04 12:11:42,244][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 12:11:42,290][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 12:11:42,412][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 12:11:48,185][__main__][INFO] - Starting training!
+[2024-03-04 12:18:37,987][__main__][INFO] - Starting testing!
+[2024-03-04 12:18:39,018][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-11-42/checkpoints\epoch_052.ckpt
+[2024-03-04 12:18:39,019][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-11-42
+[2024-03-04 12:18:39,020][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 12:19:06,841][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 12:19:06,841][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 12:19:06,848][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 12:19:06,903][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 12:19:06,907][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 12:19:06,971][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 12:19:06,971][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 12:19:06,974][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 12:19:06,975][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 12:19:06,975][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 12:19:06,976][__main__][INFO] - Instantiating loggers...
+[2024-03-04 12:19:06,976][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 12:19:07,022][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 12:19:07,145][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 12:19:16,332][__main__][INFO] - Starting training!
+[2024-03-04 12:25:03,273][__main__][INFO] - Starting testing!
+[2024-03-04 12:25:04,263][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-19-06/checkpoints\epoch_011.ckpt
+[2024-03-04 12:25:04,264][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-19-06
+[2024-03-04 12:25:04,264][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 12:26:52,610][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 12:26:52,610][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 12:26:52,616][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 12:26:52,662][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 12:26:52,665][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 12:26:52,726][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 12:26:52,727][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 12:26:52,729][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 12:26:52,730][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 12:26:52,730][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 12:26:52,731][__main__][INFO] - Instantiating loggers...
+[2024-03-04 12:26:52,731][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 12:26:52,776][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 12:26:52,893][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 12:26:58,959][__main__][INFO] - Starting training!
+[2024-03-04 12:27:12,927][__main__][INFO] - Starting testing!
+[2024-03-04 12:27:13,950][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-26-52/checkpoints\epoch_000.ckpt
+[2024-03-04 12:27:13,951][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-26-52
+[2024-03-04 12:27:13,952][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 12:27:55,016][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 12:27:55,017][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 12:27:55,023][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 12:27:55,071][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 12:27:55,075][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 12:27:55,138][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 12:27:55,138][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 12:27:55,141][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 12:27:55,142][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 12:27:55,143][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 12:27:55,143][__main__][INFO] - Instantiating loggers...
+[2024-03-04 12:27:55,143][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 12:27:55,189][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 12:27:55,307][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 12:28:03,685][__main__][INFO] - Starting training!
+[2024-03-04 12:42:58,615][__main__][INFO] - Starting testing!
+[2024-03-04 12:42:59,844][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-27-54/checkpoints\epoch_026.ckpt
+[2024-03-04 12:42:59,846][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-27-54
+[2024-03-04 12:42:59,846][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 12:46:38,070][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 12:46:38,071][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 12:46:38,078][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 12:46:38,126][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 12:46:38,130][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 12:46:38,201][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 12:46:38,201][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 12:46:38,204][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 12:46:38,205][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 12:46:38,205][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 12:46:38,206][__main__][INFO] - Instantiating loggers...
+[2024-03-04 12:46:38,206][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 12:46:38,254][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 12:46:38,381][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 12:46:46,250][__main__][INFO] - Starting training!
+[2024-03-04 13:01:10,947][__main__][INFO] - Starting testing!
+[2024-03-04 13:01:11,983][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-46-37/checkpoints\epoch_046.ckpt
+[2024-03-04 13:01:11,984][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_12-46-37
+[2024-03-04 13:01:11,985][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 15:33:29,543][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 15:33:29,544][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 15:33:29,551][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 15:33:29,599][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 15:33:29,603][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 15:33:29,672][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 15:33:29,672][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 15:33:29,675][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 15:33:29,676][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 15:33:29,676][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 15:33:29,677][__main__][INFO] - Instantiating loggers...
+[2024-03-04 15:33:29,677][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 15:33:29,724][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 15:33:29,859][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 15:33:41,858][__main__][INFO] - Starting training!
+[2024-03-04 15:49:43,641][__main__][INFO] - Starting testing!
+[2024-03-04 15:49:44,590][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_15-33-29/checkpoints\epoch_033.ckpt
+[2024-03-04 15:49:44,592][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_15-33-29
+[2024-03-04 15:49:44,592][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 15:51:44,526][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 15:51:44,527][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 15:51:44,533][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 15:51:44,584][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 15:51:44,588][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 15:51:44,590][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'Momentum'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.Momentum'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.Momentum':
+ModuleNotFoundError("No module named 'torch.optim.Momentum'")
+Are you sure that 'Momentum' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.Momentum', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 15:51:44,595][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_15-51-44
+[2024-03-04 15:52:07,568][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 15:52:07,568][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 15:52:07,575][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 15:52:07,623][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 15:52:07,627][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 15:52:07,687][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 15:52:07,688][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 15:52:07,690][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 15:52:07,691][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 15:52:07,691][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 15:52:07,692][__main__][INFO] - Instantiating loggers...
+[2024-03-04 15:52:07,692][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 15:52:07,735][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 15:52:07,850][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 15:52:12,207][__main__][INFO] - Starting training!
+[2024-03-04 16:08:32,717][__main__][INFO] - Starting testing!
+[2024-03-04 16:08:33,835][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_15-52-07/checkpoints\epoch_026.ckpt
+[2024-03-04 16:08:33,837][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_15-52-07
+[2024-03-04 16:08:33,838][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 16:09:35,136][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:09:35,137][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:09:35,144][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:09:35,191][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:09:35,194][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:09:35,196][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'momentum'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.momentum'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.momentum':
+ModuleNotFoundError("No module named 'torch.optim.momentum'")
+Are you sure that 'momentum' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.momentum', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:09:35,198][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-09-35
+[2024-03-04 16:10:10,120][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:10:10,120][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:10:10,126][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:10:10,174][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:10:10,178][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:10:10,180][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'Nestrov'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.Nestrov'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.Nestrov':
+ModuleNotFoundError("No module named 'torch.optim.Nestrov'")
+Are you sure that 'Nestrov' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.Nestrov', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:10:10,181][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-10-10
+[2024-03-04 16:10:55,822][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:10:55,822][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:10:55,828][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:10:55,872][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:10:55,876][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:10:55,877][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'Nesterov'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.Nesterov'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.Nesterov':
+ModuleNotFoundError("No module named 'torch.optim.Nesterov'")
+Are you sure that 'Nesterov' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.Nesterov', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:10:55,879][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-10-55
+[2024-03-04 16:11:13,461][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:11:13,462][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:11:13,467][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:11:13,511][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:11:13,515][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:11:13,517][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'NAG'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.NAG'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.NAG':
+ModuleNotFoundError("No module named 'torch.optim.NAG'")
+Are you sure that 'NAG' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.NAG', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:11:13,518][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-11-13
+[2024-03-04 16:11:34,116][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:11:34,116][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:11:34,122][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:11:34,167][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:11:34,171][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:11:34,173][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'momentum'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.momentum'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.momentum':
+ModuleNotFoundError("No module named 'torch.optim.momentum'")
+Are you sure that 'momentum' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.momentum', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:11:34,174][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-11-34
+[2024-03-04 16:11:46,175][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:11:46,175][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:11:46,181][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:11:46,227][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:11:46,231][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:11:46,233][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'Nesterov Momentum'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.Nesterov Momentum'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.Nesterov Momentum':
+ModuleNotFoundError("No module named 'torch.optim.Nesterov Momentum'")
+Are you sure that 'Nesterov Momentum' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.Nesterov Momentum', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:11:46,234][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-11-46
+[2024-03-04 16:11:58,991][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:11:58,991][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:11:58,997][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:11:59,042][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:11:59,045][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:11:59,105][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 16:11:59,106][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 16:11:59,108][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 16:11:59,109][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 16:11:59,109][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 16:11:59,110][__main__][INFO] - Instantiating loggers...
+[2024-03-04 16:11:59,110][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 16:11:59,154][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 16:11:59,269][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 16:12:08,619][__main__][INFO] - Starting training!
+[2024-03-04 16:27:24,087][__main__][INFO] - Starting testing!
+[2024-03-04 16:27:25,191][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-11-58/checkpoints\epoch_000.ckpt
+[2024-03-04 16:27:25,192][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-11-58
+[2024-03-04 16:27:25,192][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 16:29:06,053][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:29:06,053][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:29:06,061][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:29:06,116][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:29:06,120][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:29:06,123][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'torch.optim' has no attribute 'stoch_grad_adam'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'torch.optim.stoch_grad_adam'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'torch.optim.stoch_grad_adam':
+ModuleNotFoundError("No module named 'torch.optim.stoch_grad_adam'")
+Are you sure that 'stoch_grad_adam' is importable from module 'torch.optim'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'torch.optim.stoch_grad_adam', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-04 16:29:06,125][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-29-05
+[2024-03-04 16:30:02,795][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:30:02,795][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:30:02,801][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:30:02,847][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:30:02,850][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:30:02,914][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 16:30:02,914][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 16:30:02,916][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 16:30:02,917][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 16:30:02,918][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 16:30:02,918][__main__][INFO] - Instantiating loggers...
+[2024-03-04 16:30:02,919][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 16:30:02,962][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 16:30:03,080][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 16:30:13,209][__main__][INFO] - Starting training!
+[2024-03-04 16:30:14,426][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 965, in _run
+    self.strategy.setup(self)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\single_device.py", line 78, in setup
+    super().setup(trainer)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 151, in setup
+    self.setup_optimizers(trainer)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 140, in setup_optimizers
+    self.optimizers, self.lr_scheduler_configs = _init_optimizers_and_lr_schedulers(self.lightning_module)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\optimizer.py", line 177, in _init_optimizers_and_lr_schedulers
+    optim_conf = call._call_lightning_module_hook(model.trainer, "configure_optimizers", pl_module=model)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 157, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\models\Xray_module.py", line 124, in configure_optimizers
+    optimizer = self.hparams.optimizer(params=self.parameters())
+TypeError: stochgradadam() got an unexpected keyword argument 'lr'
+[2024-03-04 16:30:14,431][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-30-02
+[2024-03-04 16:30:14,431][src.utils.utils][INFO] - Closing wandb!
+[2024-03-04 16:30:44,401][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-04 16:30:44,401][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-04 16:30:44,407][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-04 16:30:44,452][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-04 16:30:44,455][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-04 16:30:44,515][__main__][INFO] - Instantiating callbacks...
+[2024-03-04 16:30:44,515][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-04 16:30:44,517][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-04 16:30:44,518][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-04 16:30:44,519][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-04 16:30:44,519][__main__][INFO] - Instantiating loggers...
+[2024-03-04 16:30:44,520][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-04 16:30:44,563][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-04 16:30:44,682][__main__][INFO] - Logging hyperparameters!
+[2024-03-04 16:30:51,068][__main__][INFO] - Starting training!
+[2024-03-04 16:45:37,842][__main__][INFO] - Starting testing!
+[2024-03-04 16:45:38,793][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-30-44/checkpoints\epoch_098.ckpt
+[2024-03-04 16:45:38,796][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-04_16-30-44
+[2024-03-04 16:45:38,796][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 10:17:07,383][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 10:17:07,384][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 10:17:07,391][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 10:17:07,446][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 10:17:07,451][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 10:17:07,559][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 10:17:07,559][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 10:17:07,562][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 10:17:07,563][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 10:17:07,563][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 10:17:07,564][__main__][INFO] - Instantiating loggers...
+[2024-03-05 10:17:07,564][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 10:17:07,612][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 10:17:08,342][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 10:17:23,569][__main__][INFO] - Starting training!
+[2024-03-05 10:23:06,021][__main__][INFO] - Starting testing!
+[2024-03-05 10:23:07,287][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-17-07/checkpoints\epoch_018.ckpt
+[2024-03-05 10:23:07,288][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-17-07
+[2024-03-05 10:23:07,288][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 10:23:40,976][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 10:23:40,976][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 10:23:40,982][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 10:23:41,026][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 10:23:41,030][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 10:23:41,095][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 10:23:41,095][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 10:23:41,097][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 10:23:41,098][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 10:23:41,099][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 10:23:41,099][__main__][INFO] - Instantiating loggers...
+[2024-03-05 10:23:41,100][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 10:23:41,142][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 10:23:41,268][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 10:23:46,871][__main__][INFO] - Starting training!
+[2024-03-05 10:37:23,633][__main__][INFO] - Starting testing!
+[2024-03-05 10:37:24,671][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-23-40/checkpoints\epoch_016.ckpt
+[2024-03-05 10:37:24,672][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-23-40
+[2024-03-05 10:37:24,672][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 10:42:26,353][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 10:42:26,353][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 10:42:26,359][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 10:42:26,408][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 10:42:26,411][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 10:42:26,473][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 10:42:26,473][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 10:42:26,475][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 10:42:26,476][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 10:42:26,477][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 10:42:26,478][__main__][INFO] - Instantiating loggers...
+[2024-03-05 10:42:26,478][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 10:42:26,519][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 10:42:26,635][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 10:42:32,907][__main__][INFO] - Starting training!
+[2024-03-05 10:56:23,668][__main__][INFO] - Starting testing!
+[2024-03-05 10:56:24,643][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-42-26/checkpoints\epoch_015.ckpt
+[2024-03-05 10:56:24,644][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-42-26
+[2024-03-05 10:56:24,645][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 10:56:56,353][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 10:56:56,353][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 10:56:56,359][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 10:56:56,401][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 10:56:56,404][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 10:56:56,408][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "D:\python3.10\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1001, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src_pokeman.optim.SGA.stochgradadam'; 'src_pokeman.optim.SGA' is not a package
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'src_pokeman.optim.SGA.stochgradadam':
+ModuleNotFoundError("No module named 'src_pokeman.optim.SGA.stochgradadam'; 'src_pokeman.optim.SGA' is not a package")
+Are you sure that 'stochgradadam' is importable from module 'src_pokeman.optim.SGA'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 56, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 342, in instantiate_node
+    value = instantiate_node(
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "D:\PCproject\venv\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'src_pokeman.optim.SGA.stochgradadam', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: model.optimizer
+[2024-03-05 10:56:56,410][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-56-56
+[2024-03-05 10:58:31,992][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 10:58:31,992][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 10:58:31,997][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 10:58:32,044][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 10:58:32,048][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 10:58:32,110][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 10:58:32,110][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 10:58:32,112][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 10:58:32,113][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 10:58:32,114][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 10:58:32,115][__main__][INFO] - Instantiating loggers...
+[2024-03-05 10:58:32,115][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 10:58:32,158][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 10:58:32,278][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 10:58:38,123][__main__][INFO] - Starting training!
+[2024-03-05 11:15:01,727][__main__][INFO] - Starting testing!
+[2024-03-05 11:15:02,721][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-58-31/checkpoints\epoch_041.ckpt
+[2024-03-05 11:15:02,722][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_10-58-31
+[2024-03-05 11:15:02,723][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 11:17:29,905][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 11:17:29,906][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 11:17:29,912][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 11:17:29,961][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 11:17:29,965][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 11:17:30,028][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 11:17:30,029][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 11:17:30,031][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 11:17:30,032][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 11:17:30,032][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 11:17:30,033][__main__][INFO] - Instantiating loggers...
+[2024-03-05 11:17:30,033][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 11:17:30,077][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 11:17:30,201][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 11:17:39,539][__main__][INFO] - Starting training!
+[2024-03-05 11:17:42,356][__main__][INFO] - Starting testing!
+[2024-03-05 11:17:42,356][__main__][WARNING] - Best ckpt not found! Using current weights for testing...
+[2024-03-05 11:17:42,700][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\Xray_train.py", line 97, in train
+    trainer.test(model=model, datamodule=datamodule, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 754, in test
+    return call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 794, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1028, in _run_stage
+    return self._evaluation_loop.run()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\utilities.py", line 182, in _decorator
+    return loop_run(self, *args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\evaluation_loop.py", line 134, in run
+    self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\evaluation_loop.py", line 405, in _evaluation_step
+    call._call_callback_hooks(trainer, hook_name, output, *hook_kwargs.values())
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 208, in _call_callback_hooks
+    fn(trainer, trainer.lightning_module, *args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\callbacks\progress\rich_progress.py", line 561, in on_test_batch_end
+    assert self.test_progress_bar_id is not None
+AssertionError
+[2024-03-05 11:17:42,706][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_11-17-29
+[2024-03-05 11:17:42,706][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 11:19:06,898][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 11:19:06,898][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 11:19:06,904][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 11:19:06,948][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 11:19:06,952][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 11:19:07,014][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 11:19:07,014][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 11:19:07,016][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 11:19:07,017][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 11:19:07,018][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 11:19:07,018][__main__][INFO] - Instantiating loggers...
+[2024-03-05 11:19:07,019][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 11:19:07,062][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 11:19:07,178][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 11:19:17,171][__main__][INFO] - Starting training!
+[2024-03-05 11:34:19,343][__main__][INFO] - Starting testing!
+[2024-03-05 11:34:20,327][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_11-19-06/checkpoints\epoch_046.ckpt
+[2024-03-05 11:34:20,328][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_11-19-06
+[2024-03-05 11:34:20,328][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 11:35:35,343][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 11:35:35,344][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 11:35:35,349][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 11:35:35,393][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 11:35:35,397][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 11:35:35,460][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 11:35:35,460][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 11:35:35,463][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 11:35:35,464][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 11:35:35,464][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 11:35:35,465][__main__][INFO] - Instantiating loggers...
+[2024-03-05 11:35:35,465][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 11:35:35,508][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 11:35:35,626][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 11:35:44,628][__main__][INFO] - Starting training!
+[2024-03-05 11:53:30,118][__main__][INFO] - Starting testing!
+[2024-03-05 11:53:31,099][__main__][INFO] - Best ckpt path: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_11-35-35/checkpoints\epoch_028.ckpt
+[2024-03-05 11:53:31,101][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pf_logs\logs\train\runs\2024-03-05_11-35-35
+[2024-03-05 11:53:31,101][src.utils.utils][INFO] - Closing wandb!
+[2024-03-05 19:32:50,763][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 19:32:50,763][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 19:32:50,768][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 19:32:50,803][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 19:32:50,805][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 19:32:50,858][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 19:32:50,859][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 19:32:50,860][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 19:32:50,861][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 19:32:50,861][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 19:32:50,862][__main__][INFO] - Instantiating loggers...
+[2024-03-05 19:32:50,862][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 19:32:50,955][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 19:32:51,308][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 19:33:09,663][__main__][INFO] - Starting training!
+[2024-03-05 19:35:18,900][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 19:35:18,900][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 19:35:18,905][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 19:35:18,941][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 19:35:18,943][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 19:35:18,989][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 19:35:18,989][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 19:35:18,991][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 19:35:18,992][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 19:35:18,992][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 19:35:18,993][__main__][INFO] - Instantiating loggers...
+[2024-03-05 19:35:18,993][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 19:35:19,085][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 19:35:19,428][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 19:35:36,977][__main__][INFO] - Starting training!
+[2024-03-05 19:45:36,941][__main__][INFO] - Starting testing!
+[2024-03-05 19:45:38,037][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-05_19-35-18\checkpoints\epoch_016.ckpt
+[2024-03-05 19:45:38,038][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-05_19-35-18
+[2024-03-05 19:45:38,038][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-05 19:45:48,576][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-05 19:46:54,786][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 19:46:54,786][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 19:46:54,791][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 19:46:54,826][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 19:46:54,828][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 19:46:54,875][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 19:46:54,876][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 19:46:54,877][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 19:46:54,878][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 19:46:54,878][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 19:46:54,879][__main__][INFO] - Instantiating loggers...
+[2024-03-05 19:46:54,879][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 19:46:54,972][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 19:46:55,315][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 19:47:11,601][__main__][INFO] - Starting training!
+[2024-03-05 19:56:15,177][__main__][INFO] - Starting testing!
+[2024-03-05 19:56:16,287][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-05_19-46-54\checkpoints\epoch_022.ckpt
+[2024-03-05 19:56:16,288][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-05_19-46-54
+[2024-03-05 19:56:16,289][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-05 20:04:11,699][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-05 20:04:11,699][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-05 20:04:11,704][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-05 20:04:11,738][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-05 20:04:11,740][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-05 20:04:11,789][__main__][INFO] - Instantiating callbacks...
+[2024-03-05 20:04:11,789][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-05 20:04:11,791][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-05 20:04:11,792][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-05 20:04:11,792][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-05 20:04:11,793][__main__][INFO] - Instantiating loggers...
+[2024-03-05 20:04:11,793][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-05 20:04:11,886][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-05 20:04:12,229][__main__][INFO] - Logging hyperparameters!
+[2024-03-05 20:04:35,493][__main__][INFO] - Starting training!
+[2024-03-05 20:14:48,005][__main__][INFO] - Starting testing!
+[2024-03-05 20:14:49,133][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-05_20-04-11\checkpoints\epoch_019.ckpt
+[2024-03-05 20:14:49,134][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-05_20-04-11
+[2024-03-05 20:14:49,134][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-05 20:15:32,017][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-27 19:43:23,213][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-27 19:43:23,214][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-27 19:43:23,222][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-27 19:43:23,260][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-27 19:43:23,263][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-27 19:43:23,350][__main__][INFO] - Instantiating callbacks...
+[2024-03-27 19:43:23,351][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-27 19:43:23,352][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-27 19:43:23,353][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-27 19:43:23,353][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-27 19:43:23,354][__main__][INFO] - Instantiating loggers...
+[2024-03-27 19:43:23,354][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-27 19:43:23,466][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-27 19:43:23,864][__main__][INFO] - Logging hyperparameters!
+[2024-03-27 19:43:39,965][__main__][INFO] - Starting training!
+[2024-03-27 19:43:58,845][src_pokeman.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "C:\Users\asus\Desktop\stomach1\src_pokeman\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+                               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\Desktop\stomach1\src_pokeman\Xray_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 545, in fit
+    call._call_and_handle_interrupt(
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 581, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 990, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1036, in _run_stage
+    self.fit_loop.run()
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 203, in run
+    self.on_advance_end()
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 374, in on_advance_end
+    call._call_callback_hooks(trainer, "on_train_epoch_end", monitoring_callbacks=True)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 208, in _call_callback_hooks
+    fn(trainer, trainer.lightning_module, *args, **kwargs)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\callbacks\model_checkpoint.py", line 312, in on_train_epoch_end
+    self._save_last_checkpoint(trainer, monitor_candidates)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\callbacks\model_checkpoint.py", line 670, in _save_last_checkpoint
+    self._link_checkpoint(trainer, self._last_checkpoint_saved, filepath)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\callbacks\model_checkpoint.py", line 388, in _link_checkpoint
+    os.symlink(filepath, linkpath)
+OSError: [WinError 1314] 客户端没有所需的特权。: 'C:\\Users\\asus\\data\\pf_logs\\logs\\train\\runs\\2024-03-27_19-43-23\\checkpoints\\epoch_000.ckpt' -> 'C:\\Users\\asus\\data\\pf_logs\\logs\\train\\runs\\2024-03-27_19-43-23\\checkpoints\\last.ckpt'
+[2024-03-27 19:43:58,893][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_19-43-23
+[2024-03-27 19:43:58,894][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-27 20:03:05,583][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-27 20:03:05,583][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-27 20:03:05,588][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-27 20:03:05,621][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-27 20:03:05,624][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-27 20:03:05,670][__main__][INFO] - Instantiating callbacks...
+[2024-03-27 20:03:05,670][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-27 20:03:05,672][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-27 20:03:05,672][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-27 20:03:05,673][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-27 20:03:05,673][__main__][INFO] - Instantiating loggers...
+[2024-03-27 20:03:05,673][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-27 20:03:05,765][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-27 20:03:06,109][__main__][INFO] - Logging hyperparameters!
+[2024-03-27 20:03:23,128][__main__][INFO] - Starting training!
+[2024-03-27 20:08:03,431][__main__][INFO] - Starting testing!
+[2024-03-27 20:08:05,970][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-03-05\checkpoints\epoch_049.ckpt
+[2024-03-27 20:08:05,970][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-03-05
+[2024-03-27 20:08:05,971][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-27 20:08:16,082][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-27 20:29:47,238][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-27 20:29:47,238][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-27 20:29:47,243][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-27 20:29:47,276][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-27 20:29:47,278][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-27 20:29:47,325][__main__][INFO] - Instantiating callbacks...
+[2024-03-27 20:29:47,326][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-27 20:29:47,327][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-27 20:29:47,328][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-27 20:29:47,328][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-27 20:29:47,329][__main__][INFO] - Instantiating loggers...
+[2024-03-27 20:29:47,329][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-27 20:29:47,423][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-27 20:29:47,762][__main__][INFO] - Logging hyperparameters!
+[2024-03-27 20:30:02,215][__main__][INFO] - Starting training!
+[2024-03-27 20:34:47,700][__main__][INFO] - Starting testing!
+[2024-03-27 20:34:48,686][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-29-47\checkpoints\epoch_049.ckpt
+[2024-03-27 20:34:48,687][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-29-47
+[2024-03-27 20:34:48,687][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-27 20:34:59,480][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-27 20:36:11,801][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-27 20:36:11,801][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-27 20:36:11,806][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-27 20:36:11,845][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-27 20:36:11,847][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-27 20:36:11,897][__main__][INFO] - Instantiating callbacks...
+[2024-03-27 20:36:11,897][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-27 20:36:11,899][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-27 20:36:11,899][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-27 20:36:11,901][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-27 20:36:11,901][__main__][INFO] - Instantiating loggers...
+[2024-03-27 20:36:11,901][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-27 20:36:12,002][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-27 20:36:12,371][__main__][INFO] - Logging hyperparameters!
+[2024-03-27 20:36:27,415][__main__][INFO] - Starting training!
+[2024-03-27 20:41:15,390][__main__][INFO] - Starting testing!
+[2024-03-27 20:41:16,366][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-36-11\checkpoints\epoch_048.ckpt
+[2024-03-27 20:41:16,366][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-36-11
+[2024-03-27 20:41:16,367][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-27 20:41:26,389][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-27 20:42:53,309][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-27 20:42:53,309][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-27 20:42:53,314][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-27 20:42:53,350][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-27 20:42:53,352][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-27 20:42:53,399][__main__][INFO] - Instantiating callbacks...
+[2024-03-27 20:42:53,400][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-27 20:42:53,402][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-27 20:42:53,402][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-27 20:42:53,403][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-27 20:42:53,403][__main__][INFO] - Instantiating loggers...
+[2024-03-27 20:42:53,403][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-27 20:42:53,498][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-27 20:42:53,829][__main__][INFO] - Logging hyperparameters!
+[2024-03-27 20:43:10,295][__main__][INFO] - Starting training!
+[2024-03-27 20:48:06,748][__main__][INFO] - Starting testing!
+[2024-03-27 20:48:07,762][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-42-53\checkpoints\epoch_002.ckpt
+[2024-03-27 20:48:07,763][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-42-53
+[2024-03-27 20:48:07,763][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-27 20:48:17,625][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-27 20:49:50,560][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-27 20:49:50,563][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-27 20:49:50,567][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-27 20:49:50,599][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-27 20:49:50,601][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-27 20:49:50,649][__main__][INFO] - Instantiating callbacks...
+[2024-03-27 20:49:50,649][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-27 20:49:50,651][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-27 20:49:50,651][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-27 20:49:50,652][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-27 20:49:50,652][__main__][INFO] - Instantiating loggers...
+[2024-03-27 20:49:50,652][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-27 20:49:50,742][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-27 20:49:51,077][__main__][INFO] - Logging hyperparameters!
+[2024-03-27 20:50:07,437][__main__][INFO] - Starting training!
+[2024-03-27 20:54:54,158][__main__][INFO] - Starting testing!
+[2024-03-27 20:54:55,173][__main__][INFO] - Best ckpt path: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-49-50\checkpoints\epoch_003.ckpt
+[2024-03-27 20:54:55,174][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-27_20-49-50
+[2024-03-27 20:54:55,174][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-27 20:55:03,494][src_pokeman.utils.utils][INFO] - Metric name is None! Skipping metric value retrieval...
+[2024-03-28 21:34:48,641][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-28 21:34:48,642][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-28 21:34:48,648][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-28 21:34:48,686][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-28 21:34:48,689][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-28 21:34:48,756][__main__][INFO] - Instantiating callbacks...
+[2024-03-28 21:34:48,756][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-28 21:34:48,758][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-28 21:34:48,759][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-28 21:34:48,759][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-28 21:34:48,759][__main__][INFO] - Instantiating loggers...
+[2024-03-28 21:34:48,760][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-28 21:34:48,859][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-28 21:34:49,294][__main__][INFO] - Logging hyperparameters!
+[2024-03-28 21:35:36,428][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-28 21:35:36,428][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-28 21:35:36,433][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-28 21:35:36,466][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-28 21:35:36,468][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-28 21:35:36,518][__main__][INFO] - Instantiating callbacks...
+[2024-03-28 21:35:36,518][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-28 21:35:36,519][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-28 21:35:36,520][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-28 21:35:36,520][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-28 21:35:36,521][__main__][INFO] - Instantiating loggers...
+[2024-03-28 21:35:36,521][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-28 21:35:36,614][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-28 21:35:36,976][__main__][INFO] - Logging hyperparameters!
+[2024-03-28 21:36:05,440][__main__][INFO] - Starting training!
+[2024-03-28 23:07:34,780][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-28 23:07:34,780][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-28 23:07:34,785][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-28 23:07:34,821][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-28 23:07:34,822][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-28 23:07:34,871][__main__][INFO] - Instantiating callbacks...
+[2024-03-28 23:07:34,871][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-28 23:07:34,873][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-28 23:07:34,874][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-28 23:07:34,874][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-28 23:07:34,875][__main__][INFO] - Instantiating loggers...
+[2024-03-28 23:07:34,875][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-28 23:07:34,969][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-28 23:07:35,329][__main__][INFO] - Logging hyperparameters!
+[2024-03-28 23:07:53,670][__main__][INFO] - Starting training!
+[2024-03-28 23:11:24,342][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-28 23:11:24,342][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-28 23:11:24,347][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-28 23:11:24,380][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-28 23:11:24,383][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-28 23:11:24,431][__main__][INFO] - Instantiating callbacks...
+[2024-03-28 23:11:24,431][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-28 23:11:24,433][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-28 23:11:24,434][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-28 23:11:24,434][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-28 23:11:24,434][__main__][INFO] - Instantiating loggers...
+[2024-03-28 23:11:24,435][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-28 23:11:24,532][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-28 23:11:24,909][__main__][INFO] - Logging hyperparameters!
+[2024-03-28 23:12:17,127][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-28 23:12:17,127][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-28 23:12:17,132][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-28 23:12:17,167][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-28 23:12:17,170][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-28 23:12:17,217][__main__][INFO] - Instantiating callbacks...
+[2024-03-28 23:12:17,217][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-28 23:12:17,219][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-28 23:12:17,220][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-28 23:12:17,220][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-28 23:12:17,220][__main__][INFO] - Instantiating loggers...
+[2024-03-28 23:12:17,220][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-28 23:12:17,319][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-28 23:12:17,683][__main__][INFO] - Logging hyperparameters!
+[2024-03-28 23:12:32,379][__main__][INFO] - Starting training!
+[2024-03-30 22:06:20,985][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:06:20,986][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:06:20,991][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:06:21,022][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:06:21,026][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:06:21,079][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:06:21,079][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:06:21,081][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:06:21,082][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:06:21,082][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:06:21,082][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:06:21,083][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:06:21,175][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:06:21,515][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:06:38,638][__main__][INFO] - Starting training!
+[2024-03-30 22:10:45,682][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:10:45,682][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:10:45,687][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:10:45,720][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:10:45,722][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:10:45,774][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:10:45,774][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:10:45,776][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:10:45,777][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:10:45,777][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:10:45,778][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:10:45,778][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:10:45,910][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:10:46,286][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:11:03,444][__main__][INFO] - Starting training!
+[2024-03-30 22:12:29,872][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:12:29,872][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:12:29,877][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:12:29,912][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:12:29,916][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:12:29,967][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:12:29,967][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:12:29,969][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:12:29,969][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:12:29,970][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:12:29,970][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:12:29,970][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:12:30,062][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:12:30,400][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:12:49,587][__main__][INFO] - Starting training!
+[2024-03-30 22:14:11,757][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:14:11,757][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:14:11,762][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:14:11,794][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:14:11,797][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:14:11,848][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:14:11,849][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:14:11,850][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:14:11,851][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:14:11,851][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:14:11,852][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:14:11,852][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:14:11,945][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:14:12,289][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:14:28,130][__main__][INFO] - Starting training!
+[2024-03-30 22:16:03,039][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:16:03,040][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:16:03,045][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:16:03,077][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:16:03,079][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:16:03,131][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:16:03,132][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:16:03,133][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:16:03,134][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:16:03,134][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:16:03,135][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:16:03,135][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:16:03,226][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:16:03,578][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:16:22,829][__main__][INFO] - Starting training!
+[2024-03-30 22:18:07,669][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:18:07,669][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:18:07,674][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:18:07,713][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:18:07,716][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:18:07,767][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:18:07,767][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:18:07,769][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:18:07,769][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:18:07,770][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:18:07,770][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:18:07,770][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:18:07,869][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:18:08,223][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:18:25,392][__main__][INFO] - Starting training!
+[2024-03-30 22:20:27,669][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:20:27,669][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:20:27,674][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:20:27,710][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:20:27,714][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:20:27,765][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:20:27,765][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:20:27,767][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:20:27,767][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:20:27,768][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:20:27,768][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:20:27,768][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:20:27,859][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:20:28,193][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:20:46,717][__main__][INFO] - Starting training!
+[2024-03-30 22:24:02,927][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:24:02,927][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:24:02,932][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:24:02,965][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:24:02,968][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:24:03,017][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:24:03,017][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:24:03,019][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:24:03,019][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:24:03,020][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:24:03,020][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:24:03,020][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:24:03,113][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:24:03,463][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:24:19,466][__main__][INFO] - Starting training!
+[2024-03-30 22:28:23,102][src_pokeman.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 581, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 990, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1036, in _run_stage
+    self.fit_loop.run()
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 202, in run
+    self.advance()
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 359, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 136, in run
+    self.advance(data_fetcher)
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 202, in advance
+    batch, _, __ = next(data_fetcher)
+                   ^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\fetchers.py", line 127, in __next__
+    batch = super().__next__()
+            ^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\loops\fetchers.py", line 56, in __next__
+    batch = next(self.iterator)
+            ^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\utilities\combined_loader.py", line 326, in __next__
+    out = next(self._iterator)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\utilities\combined_loader.py", line 74, in __next__
+    out[i] = next(self.iterators[i])
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\dataloader.py", line 634, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\dataloader.py", line 678, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\_utils\collate.py", line 264, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\_utils\collate.py", line 142, in collate
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\_utils\collate.py", line 142, in <listcomp>
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\_utils\collate.py", line 119, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\torch\utils\data\_utils\collate.py", line 162, in collate_tensor_fn
+    return torch.stack(batch, 0, out=out)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at ..\c10\core\impl\alloc_cpu.cpp:72] data. DefaultCPUAllocator: not enough memory: you tried to allocate 19267584 bytes.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\asus\Desktop\stomach1\src_pokeman\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+                               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\Desktop\stomach1\src_pokeman\Xray_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 545, in fit
+    call._call_and_handle_interrupt(
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 68, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1013, in _teardown
+    self.strategy.teardown()
+  File "F:\pytorch\Lib\site-packages\lightning\pytorch\strategies\strategy.py", line 524, in teardown
+    _optimizers_to_device(self.optimizers, torch.device("cpu"))
+  File "F:\pytorch\Lib\site-packages\lightning\fabric\utilities\optimizer.py", line 28, in _optimizers_to_device
+    _optimizer_to_device(opt, device)
+  File "F:\pytorch\Lib\site-packages\lightning\fabric\utilities\optimizer.py", line 34, in _optimizer_to_device
+    optimizer.state[p] = apply_to_collection(v, Tensor, move_data_to_device, device, allow_frozen=True)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning_utilities\core\apply_func.py", line 59, in apply_to_collection
+    v = apply_to_collection(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning_utilities\core\apply_func.py", line 51, in apply_to_collection
+    return function(data, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\fabric\utilities\apply_func.py", line 102, in move_data_to_device
+    return apply_to_collection(batch, dtype=_TransferableDataType, function=batch_to)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning_utilities\core\apply_func.py", line 51, in apply_to_collection
+    return function(data, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\pytorch\Lib\site-packages\lightning\fabric\utilities\apply_func.py", line 96, in batch_to
+    data_output = data.to(device, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at ..\c10\core\impl\alloc_cpu.cpp:72] data. DefaultCPUAllocator: not enough memory: you tried to allocate 614400 bytes.
+[2024-03-30 22:28:23,270][src_pokeman.utils.utils][INFO] - Output dir: C:\Users\asus\data\pf_logs\logs\train\runs\2024-03-30_22-24-02
+[2024-03-30 22:28:23,270][src_pokeman.utils.utils][INFO] - Closing wandb!
+[2024-03-30 22:32:00,146][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:32:00,147][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:32:00,152][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:32:00,185][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:32:00,188][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:32:00,259][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:32:00,259][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:32:00,261][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:32:00,262][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:32:00,262][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:32:00,263][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:32:00,263][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:32:00,366][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:32:00,735][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:32:16,628][__main__][INFO] - Starting training!
+[2024-03-30 22:34:25,103][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:34:25,103][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:34:25,108][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:34:25,145][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:34:25,147][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:34:25,196][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:34:25,196][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:34:25,198][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:34:25,198][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:34:25,199][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:34:25,199][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:34:25,199][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:34:25,292][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:34:25,643][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:34:40,979][__main__][INFO] - Starting training!
+[2024-03-30 22:35:49,784][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:35:49,784][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:35:49,789][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:35:49,826][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:35:49,829][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:35:49,880][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:35:49,880][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:35:49,882][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:35:49,883][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:35:49,883][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:35:49,883][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:35:49,884][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:35:49,980][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:35:50,323][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:36:09,664][__main__][INFO] - Starting training!
+[2024-03-30 22:38:32,490][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:38:32,490][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:38:32,494][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:38:32,530][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:38:32,532][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:38:32,584][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:38:32,584][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:38:32,586][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:38:32,587][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:38:32,587][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:38:32,588][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:38:32,588][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:38:32,684][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:38:33,042][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:38:48,830][__main__][INFO] - Starting training!
+[2024-03-30 22:40:02,257][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:40:02,257][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:40:02,262][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:40:02,294][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:40:02,296][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:40:02,346][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:40:02,346][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:40:02,348][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:40:02,348][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:40:02,348][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:40:02,349][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:40:02,349][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:40:02,440][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:40:02,789][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:40:20,378][__main__][INFO] - Starting training!
+[2024-03-30 22:46:14,388][src_pokeman.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-03-30 22:46:14,388][src_pokeman.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-03-30 22:46:14,393][src_pokeman.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-03-30 22:46:14,427][__main__][INFO] - Instantiating datamodule <src_pokeman.data.X-ray.XrayDataModule>
+[2024-03-30 22:46:14,429][__main__][INFO] - Instantiating model <src_pokeman.models.Xray_module.XrayLitModule>
+[2024-03-30 22:46:14,477][__main__][INFO] - Instantiating callbacks...
+[2024-03-30 22:46:14,477][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-03-30 22:46:14,479][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-03-30 22:46:14,480][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-03-30 22:46:14,480][src_pokeman.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-03-30 22:46:14,481][__main__][INFO] - Instantiating loggers...
+[2024-03-30 22:46:14,481][src_pokeman.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-03-30 22:46:14,572][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-03-30 22:46:14,918][__main__][INFO] - Logging hyperparameters!
+[2024-03-30 22:46:32,157][__main__][INFO] - Starting training!

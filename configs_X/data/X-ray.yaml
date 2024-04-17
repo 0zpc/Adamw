@@ -1,0 +1,6 @@
+_target_: src_pokeman.data.X-ray.XrayDataModule
+data_dir: ${paths.data_dir}
+batch_size: 32
+train_val_test_split: [1000, 485, 400]
+num_workers: 0
+pin_memory: False

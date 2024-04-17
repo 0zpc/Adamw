@@ -1,0 +1,6 @@
+_target_: src_pokeman.data.pokeman_datamodule.PokemanDataModule
+data_dir: ${paths.data_dir}
+batch_size: 32
+train_val_test_split: [1000, 485, 500]
+num_workers: 0
+pin_memory: False

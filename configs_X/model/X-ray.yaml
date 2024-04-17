@@ -1,0 +1,26 @@
+_target_: src_pokeman.models.Xray_module.XrayLitModule
+
+optimizer:
+#  _target_: torch.optim.RMSprop
+
+  _target_: src_pokeman.optim.adamwsnip1.AdamW
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.000001
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+net:
+  _target_: src_pokeman.models.components.mobilenetv2.MobileNetV2
+#  _target_: src.models.components.resnet18.Resnet18
+#  SimpleDenseNet
+#  input_size: 784
+#  lin1_size: 64
+#  lin2_size: 128
+#  lin3_size: 64
+#  output_size: 10

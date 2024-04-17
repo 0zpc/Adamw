@@ -1,0 +1,563 @@
+[2023-11-30 18:01:16,943][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-11-30 18:01:16,943][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-11-30 18:01:16,951][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-11-30 18:01:17,043][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-11-30 18:01:17,063][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-11-30 18:01:17,329][__main__][INFO] - Instantiating callbacks...
+[2023-11-30 18:01:17,329][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-11-30 18:01:17,335][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-11-30 18:01:17,337][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-11-30 18:01:17,338][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-11-30 18:01:17,339][__main__][INFO] - Instantiating loggers...
+[2023-11-30 18:01:17,339][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-11-30 18:01:25,563][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-11-30 18:01:25,806][__main__][INFO] - Logging hyperparameters!
+[2023-11-30 18:01:25,817][__main__][INFO] - Starting training!
+[2023-11-30 18:01:26,054][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+                               ^^^^^^^^^^^^^^^^^^
+  File "D:\PCproject\template\lighting-template\src_pokeman\pokeman_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 531, in fit
+    call._call_and_handle_interrupt(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 42, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 570, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 936, in _run
+    call._call_setup_hook(self)  # allow user to setup lightning_module in accelerator environment
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 79, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 160, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\PCproject\template\lighting-template\src_pokeman\data\pokeman_datamodule.py", line 67, in setup
+    dataset = torchvision.datasets.ImageFolder(self.hparams.data_dir, transform=self.transforms)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torchvision\datasets\folder.py", line 309, in __init__
+    super().__init__(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torchvision\datasets\folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torchvision\datasets\folder.py", line 218, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torchvision\datasets\folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '../../../data/pokeman/'
+[2023-11-30 18:01:26,138][src.utils.utils][INFO] - Output dir: D:\PCproject\data\pokeman_logs\logs\train\multiruns\2023-11-30_18-01-02\0
+[2023-11-30 18:01:26,139][src.utils.utils][INFO] - Closing wandb!
+[2023-11-30 18:03:45,869][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-11-30 18:03:45,869][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-11-30 18:03:45,876][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-11-30 18:03:45,944][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-11-30 18:03:45,950][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-11-30 18:03:45,965][__main__][INFO] - Instantiating callbacks...
+[2023-11-30 18:03:45,965][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-11-30 18:03:45,968][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-11-30 18:03:45,970][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-11-30 18:03:45,970][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-11-30 18:03:45,971][__main__][INFO] - Instantiating loggers...
+[2023-11-30 18:03:45,972][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-11-30 18:03:57,362][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-11-30 18:03:57,552][__main__][INFO] - Logging hyperparameters!
+[2023-11-30 18:03:57,563][__main__][INFO] - Starting training!
+[2023-11-30 18:07:38,242][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+                               ^^^^^^^^^^^^^^^^^^
+  File "D:\PCproject\template\lighting-template\src_pokeman\pokeman_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 531, in fit
+    call._call_and_handle_interrupt(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 42, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 570, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 975, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1018, in _run_stage
+    self.fit_loop.run()
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 201, in run
+    self.advance()
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 354, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 133, in run
+    self.advance(data_fetcher)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 218, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 185, in run
+    self._optimizer_step(kwargs.get("batch_idx", 0), closure)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 260, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 140, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\core\module.py", line 1256, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\core\optimizer.py", line 155, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\strategies\strategy.py", line 225, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\plugins\precision\precision_plugin.py", line 114, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\optim\optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\optim\optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\optim\sgd.py", line 67, in step
+    loss = closure()
+           ^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\plugins\precision\precision_plugin.py", line 101, in _wrap_closure
+    closure_result = closure()
+                     ^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 140, in __call__
+    self._result = self.closure(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 135, in closure
+    self._backward_fn(step_output.closure_loss)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 232, in backward_fn
+    call._call_strategy_hook(self.trainer, "backward", loss, optimizer)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 287, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\strategies\strategy.py", line 200, in backward
+    self.precision_plugin.backward(closure_loss, self.lightning_module, optimizer, *args, **kwargs)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\plugins\precision\precision_plugin.py", line 67, in backward
+    model.backward(tensor, *args, **kwargs)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\core\module.py", line 1046, in backward
+    loss.backward(*args, **kwargs)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\autograd\__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.36 GiB (GPU 0; 4.00 GiB total capacity; 4.20 GiB already allocated; 0 bytes free; 4.78 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2023-11-30 18:07:42,241][src.utils.utils][INFO] - Output dir: D:\data\pokeman_logs\logs\train\multiruns\2023-11-30_18-03-43\0
+[2023-11-30 18:07:42,316][src.utils.utils][INFO] - Closing wandb!
+[2023-11-30 18:13:55,135][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-11-30 18:13:55,135][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-11-30 18:13:55,141][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-11-30 18:13:55,203][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-11-30 18:13:55,210][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-11-30 18:13:55,279][__main__][INFO] - Instantiating callbacks...
+[2023-11-30 18:13:55,280][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-11-30 18:13:55,283][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-11-30 18:13:55,284][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-11-30 18:13:55,285][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-11-30 18:13:55,286][__main__][INFO] - Instantiating loggers...
+[2023-11-30 18:13:55,286][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-11-30 18:14:03,657][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-11-30 18:14:03,877][__main__][INFO] - Logging hyperparameters!
+[2023-11-30 18:14:03,903][__main__][INFO] - Starting training!
+[2023-11-30 18:17:14,996][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+                               ^^^^^^^^^^^^^^^^^^
+  File "D:\PCproject\template\lighting-template\src_pokeman\pokeman_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 531, in fit
+    call._call_and_handle_interrupt(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 42, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 570, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 975, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1018, in _run_stage
+    self.fit_loop.run()
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 201, in run
+    self.advance()
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 354, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 133, in run
+    self.advance(data_fetcher)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 218, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 185, in run
+    self._optimizer_step(kwargs.get("batch_idx", 0), closure)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 260, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 140, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\core\module.py", line 1256, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\core\optimizer.py", line 155, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\strategies\strategy.py", line 225, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\plugins\precision\precision_plugin.py", line 114, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\optim\optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\optim\optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\optim\sgd.py", line 67, in step
+    loss = closure()
+           ^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\plugins\precision\precision_plugin.py", line 101, in _wrap_closure
+    closure_result = closure()
+                     ^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 140, in __call__
+    self._result = self.closure(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 135, in closure
+    self._backward_fn(step_output.closure_loss)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 232, in backward_fn
+    call._call_strategy_hook(self.trainer, "backward", loss, optimizer)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\trainer\call.py", line 287, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\strategies\strategy.py", line 200, in backward
+    self.precision_plugin.backward(closure_loss, self.lightning_module, optimizer, *args, **kwargs)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\plugins\precision\precision_plugin.py", line 67, in backward
+    model.backward(tensor, *args, **kwargs)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\lightning\pytorch\core\module.py", line 1046, in backward
+    loss.backward(*args, **kwargs)
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "D:\Software\anaconda3\envs\tuduipytorch\Lib\site-packages\torch\autograd\__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.36 GiB (GPU 0; 4.00 GiB total capacity; 4.20 GiB already allocated; 0 bytes free; 4.78 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2023-11-30 18:17:17,021][src.utils.utils][INFO] - Output dir: D:\data\pokeman_logs\logs\train\multiruns\2023-11-30_18-13-52\0
+[2023-11-30 18:17:17,044][src.utils.utils][INFO] - Closing wandb!
+[2023-12-05 12:19:44,022][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-12-05 12:19:44,023][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-12-05 12:19:44,028][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-12-05 12:19:44,075][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-12-05 12:19:44,079][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-12-05 12:19:44,091][__main__][INFO] - Instantiating callbacks...
+[2023-12-05 12:19:44,091][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-12-05 12:19:44,093][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-12-05 12:19:44,094][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-12-05 12:19:44,095][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-12-05 12:19:44,096][__main__][INFO] - Instantiating loggers...
+[2023-12-05 12:19:44,096][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-12-05 12:19:44,137][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-12-05 12:19:44,241][__main__][INFO] - Logging hyperparameters!
+[2023-12-05 12:19:51,672][__main__][INFO] - Starting training!
+[2023-12-05 12:19:51,777][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\pokeman_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 950, in _run
+    call._call_setup_hook(self)  # allow user to setup lightning_module in accelerator environment
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 92, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 179, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\data\pokeman_datamodule.py", line 67, in setup
+    dataset = torchvision.datasets.ImageFolder(self.hparams.data_dir, transform=self.transforms)
+  File "D:\PCproject\venv\lib\site-packages\torchvision\datasets\folder.py", line 309, in __init__
+    super().__init__(
+  File "D:\PCproject\venv\lib\site-packages\torchvision\datasets\folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "D:\PCproject\venv\lib\site-packages\torchvision\datasets\folder.py", line 218, in find_classes
+    return find_classes(directory)
+  File "D:\PCproject\venv\lib\site-packages\torchvision\datasets\folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '../../../../../data/pokeman/'
+[2023-12-05 12:19:51,780][src.utils.utils][INFO] - Output dir: D:\data\pokeman_logs\logs\train\multiruns\2023-12-05_12-19-43\0
+[2023-12-05 12:19:51,781][src.utils.utils][INFO] - Closing wandb!
+[2023-12-05 12:22:16,645][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-12-05 12:22:16,646][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-12-05 12:22:16,651][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-12-05 12:22:16,699][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-12-05 12:22:16,702][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-12-05 12:22:16,712][__main__][INFO] - Instantiating callbacks...
+[2023-12-05 12:22:16,713][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-12-05 12:22:16,715][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-12-05 12:22:16,716][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-12-05 12:22:16,716][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-12-05 12:22:16,717][__main__][INFO] - Instantiating loggers...
+[2023-12-05 12:22:16,717][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-12-05 12:22:16,759][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-12-05 12:22:16,864][__main__][INFO] - Logging hyperparameters!
+[2023-12-05 12:22:35,967][__main__][INFO] - Starting training!
+[2023-12-05 12:26:28,458][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-12-05 12:26:28,458][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-12-05 12:26:28,465][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-12-05 12:26:28,514][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-12-05 12:26:28,518][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-12-05 12:26:28,549][__main__][INFO] - Instantiating callbacks...
+[2023-12-05 12:26:28,549][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-12-05 12:26:28,551][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-12-05 12:26:28,552][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-12-05 12:26:28,553][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-12-05 12:26:28,554][__main__][INFO] - Instantiating loggers...
+[2023-12-05 12:26:28,554][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-12-05 12:26:28,597][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-12-05 12:26:29,022][__main__][INFO] - Logging hyperparameters!
+[2023-12-05 12:26:34,756][__main__][INFO] - Starting training!
+[2023-12-05 12:26:54,974][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1035, in _run_stage
+    self.fit_loop.run()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 202, in run
+    self.advance()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 359, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 136, in run
+    self.advance(data_fetcher)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 240, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 187, in run
+    self._optimizer_step(batch_idx, closure)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 265, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 157, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\module.py", line 1282, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\optimizer.py", line 151, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 230, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\plugins\precision\precision.py", line 117, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\sgd.py", line 67, in step
+    loss = closure()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\plugins\precision\precision.py", line 104, in _wrap_closure
+    closure_result = closure()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 140, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 126, in closure
+    step_output = self._step_fn()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 309, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 382, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\models\pokeman_module.py", line 77, in training_step
+    self.train_loss(loss)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 470, in wrapped_func
+    raise err
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 460, in wrapped_func
+    update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\aggregation.py", line 562, in update
+    weight = torch.as_tensor(weight, dtype=torch.float32, device=self.device)
+RuntimeError: CUDA error: unknown error
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\pokeman_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 68, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1012, in _teardown
+    self.strategy.teardown()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 528, in teardown
+    self.lightning_module.cpu()
+  File "D:\PCproject\venv\lib\site-packages\lightning\fabric\utilities\device_dtype_mixin.py", line 79, in cpu
+    return super().cpu()
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 954, in cpu
+    return self._apply(lambda t: t.cpu())
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 797, in _apply
+    module._apply(fn)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 797, in _apply
+    module._apply(fn)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 820, in _apply
+    param_applied = fn(param)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 954, in <lambda>
+    return self._apply(lambda t: t.cpu())
+RuntimeError: CUDA error: unknown error
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[2023-12-05 12:26:54,981][src.utils.utils][INFO] - Output dir: D:\data\pokeman_logs\logs\train\multiruns\2023-12-05_12-26-27\0
+[2023-12-05 12:26:54,981][src.utils.utils][INFO] - Closing wandb!
+[2023-12-05 12:33:49,042][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2023-12-05 12:33:49,043][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2023-12-05 12:33:49,050][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2023-12-05 12:33:49,101][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2023-12-05 12:33:49,104][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2023-12-05 12:33:49,139][__main__][INFO] - Instantiating callbacks...
+[2023-12-05 12:33:49,139][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2023-12-05 12:33:49,142][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2023-12-05 12:33:49,143][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2023-12-05 12:33:49,143][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2023-12-05 12:33:49,144][__main__][INFO] - Instantiating loggers...
+[2023-12-05 12:33:49,144][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2023-12-05 12:33:49,186][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2023-12-05 12:33:49,577][__main__][INFO] - Logging hyperparameters!
+[2023-12-05 12:33:58,093][__main__][INFO] - Starting training!
+[2023-12-05 12:34:18,869][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1035, in _run_stage
+    self.fit_loop.run()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 202, in run
+    self.advance()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\fit_loop.py", line 359, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 136, in run
+    self.advance(data_fetcher)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\training_epoch_loop.py", line 240, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 187, in run
+    self._optimizer_step(batch_idx, closure)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 265, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 157, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\module.py", line 1282, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\core\optimizer.py", line 151, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 230, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\plugins\precision\precision.py", line 117, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\optim\sgd.py", line 67, in step
+    loss = closure()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\plugins\precision\precision.py", line 104, in _wrap_closure
+    closure_result = closure()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 140, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 126, in closure
+    step_output = self._step_fn()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\loops\optimization\automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 309, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 382, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+  File "D:\PCproject\template\lighting-template\src_pokeman\models\pokeman_module.py", line 77, in training_step
+    self.train_loss(loss)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 470, in wrapped_func
+    raise err
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\metric.py", line 460, in wrapped_func
+    update(*args, **kwargs)
+  File "D:\PCproject\venv\lib\site-packages\torchmetrics\aggregation.py", line 562, in update
+    weight = torch.as_tensor(weight, dtype=torch.float32, device=self.device)
+RuntimeError: CUDA error: unknown error
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PCproject\template\lighting-template\src\utils\utils.py", line 68, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "D:\PCproject\template\lighting-template\src_pokeman\pokeman_train.py", line 87, in train
+    trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\call.py", line 68, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\trainer\trainer.py", line 1012, in _teardown
+    self.strategy.teardown()
+  File "D:\PCproject\venv\lib\site-packages\lightning\pytorch\strategies\strategy.py", line 528, in teardown
+    self.lightning_module.cpu()
+  File "D:\PCproject\venv\lib\site-packages\lightning\fabric\utilities\device_dtype_mixin.py", line 79, in cpu
+    return super().cpu()
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 954, in cpu
+    return self._apply(lambda t: t.cpu())
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 797, in _apply
+    module._apply(fn)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 797, in _apply
+    module._apply(fn)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 820, in _apply
+    param_applied = fn(param)
+  File "D:\PCproject\venv\lib\site-packages\torch\nn\modules\module.py", line 954, in <lambda>
+    return self._apply(lambda t: t.cpu())
+RuntimeError: CUDA error: unknown error
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[2023-12-05 12:34:18,880][src.utils.utils][INFO] - Output dir: D:\data\pokeman_logs\logs\train\multiruns\2023-12-05_12-33-47\0
+[2023-12-05 12:34:18,880][src.utils.utils][INFO] - Closing wandb!
+[2024-02-28 15:05:33,163][src.utils.utils][INFO] - Disabling python warnings! <cfg.extras.ignore_warnings=True>
+[2024-02-28 15:05:33,163][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-28 15:05:33,170][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-28 15:05:33,223][__main__][INFO] - Instantiating datamodule <src_pokeman.data.pokeman_datamodule.PokemanDataModule>
+[2024-02-28 15:05:33,227][__main__][INFO] - Instantiating model <src_pokeman.models.pokeman_module.PokemanLitModule>
+[2024-02-28 15:05:33,262][__main__][INFO] - Instantiating callbacks...
+[2024-02-28 15:05:33,263][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-02-28 15:05:33,265][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-02-28 15:05:33,266][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-02-28 15:05:33,267][src.utils.instantiators][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-02-28 15:05:33,267][__main__][INFO] - Instantiating loggers...
+[2024-02-28 15:05:33,268][src.utils.instantiators][INFO] - Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2024-02-28 15:05:33,311][__main__][INFO] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2024-02-28 15:05:33,656][__main__][INFO] - Logging hyperparameters!
